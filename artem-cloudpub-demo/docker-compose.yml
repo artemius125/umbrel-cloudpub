@@ -1,0 +1,17 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: web
+      APP_PORT: 8080
+
+  web:
+    image: busybox:1.37.0-musl@sha256:f6a95d611e0a8780fabdb2aec43e31275b2720dfefa3e41b16835bfc42454478
+    user: "1000:1000"
+    command: [httpd, -f, -p, "8080", -h, /site]
+    volumes:
+      - ./hooks/web:/site:ro
+    networks:
+      default:
+        aliases:
+          - artem-cloudpub-demo
+    restart: unless-stopped

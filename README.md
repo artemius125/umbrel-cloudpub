@@ -36,3 +36,9 @@ CloudPub запускает все публикации, ранее зареги
 - [Запуск CloudPub в Docker](https://cloudpub.ru/docs/docker)
 - [Подключение своего домена](https://cloudpub.ru/docs/domains)
 - [Шаблон Umbrel Community App Store](https://github.com/getumbrel/umbrel-community-app-store)
+
+## Тестовая страница
+
+В магазине также есть приложение **Тест CloudPub**. Чтобы проверить туннель,
+установите его и укажите `artem-cloudpub-demo:8080` в поле `HTTP` приложения
+CloudPub. По внешней ссылке откроется статическая страница.

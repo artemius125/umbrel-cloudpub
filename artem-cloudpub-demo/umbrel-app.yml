@@ -1,0 +1,15 @@
+manifestVersion: "2.0.0"
+id: artem-cloudpub-demo
+name: Тест CloudPub
+tagline: Простая страница для проверки туннеля
+category: networking
+version: "1.0.0"
+port: 4488
+description: >-
+  Статическая тестовая страница для проверки HTTPS-туннеля CloudPub.
+  Локальный адрес для агента CloudPub — artem-cloudpub-demo:8080.
+website: https://github.com/artemius125/umbrel-cloudpub
+support: https://github.com/artemius125/umbrel-cloudpub/issues
+icon: https://raw.githubusercontent.com/ermak-dev/cloudpub/8782c782763a9ee25b52a1c7dab0d4c257ad6067/docs/ru/static/img/logo.svg
+gallery: []
+dependencies: []
