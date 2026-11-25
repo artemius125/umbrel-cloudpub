@@ -3,7 +3,7 @@ id: artem-cloudpub
 name: CloudPub
 tagline: HTTPS-туннели для локальных веб-приложений
 category: networking
-version: "1.0.0"
+version: "1.0.1"
 port: 4487
 description: >-
   Агент CloudPub публикует выбранные HTTP- и HTTPS-сервисы.

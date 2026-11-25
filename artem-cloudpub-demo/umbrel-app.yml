@@ -3,7 +3,7 @@ id: artem-cloudpub-demo
 name: Тест CloudPub
 tagline: Простая страница для проверки туннеля
 category: networking
-version: "1.0.0"
+version: "1.0.1"
 port: 4488
 description: >-
   Статическая тестовая страница для проверки HTTPS-туннеля CloudPub.

@@ -9,7 +9,7 @@ services:
     user: "1000:1000"
     command: [httpd, -f, -p, "8080", -h, /site]
     volumes:
-      - ./hooks/web:/site:ro
+      - ${APP_DATA_DIR}/hooks/web:/site:ro
     networks:
       default:
         aliases:
