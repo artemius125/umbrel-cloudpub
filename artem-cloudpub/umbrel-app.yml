@@ -1,0 +1,29 @@
+manifestVersion: "2.0.0"
+id: artem-cloudpub
+name: CloudPub
+tagline: HTTPS-туннели для локальных веб-приложений
+category: networking
+version: "1.0.0"
+port: 4487
+description: >-
+  Агент CloudPub публикует выбранные HTTP- и HTTPS-сервисы.
+  После установки откройте настройки приложения и задайте токен CloudPub
+  и адреса сервисов. Свой домен привязывается в кабинете CloudPub.
+developer: CloudPub
+website: https://cloudpub.ru/
+support: https://cloudpub.ru/docs/docker
+icon: https://raw.githubusercontent.com/ermak-dev/cloudpub/8782c782763a9ee25b52a1c7dab0d4c257ad6067/docs/ru/static/img/logo.svg
+gallery: []
+dependencies: []
+storage:
+  dataRoot: data
+environment:
+  - name: TOKEN
+    services: [agent]
+    note: Токен агента из личного кабинета CloudPub.
+  - name: HTTP
+    services: [agent]
+    note: "Адреса локальных HTTP-сервисов через запятую, например 192.0.2.10:8080,192.0.2.10:3000."
+  - name: HTTPS
+    services: [agent]
+    note: "Адреса локальных HTTPS-сервисов через запятую, например 192.0.2.10:8443."

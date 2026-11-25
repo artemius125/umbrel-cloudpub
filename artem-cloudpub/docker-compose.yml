@@ -1,0 +1,27 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: web
+      APP_PORT: 8080
+
+  web:
+    image: busybox:1.37.0-musl@sha256:f6a95d611e0a8780fabdb2aec43e31275b2720dfefa3e41b16835bfc42454478
+    user: "1000:1000"
+    command: [httpd, -f, -p, "8080", -h, /site]
+    volumes:
+      - ./hooks/web:/site:ro
+    restart: unless-stopped
+
+  agent:
+    image: cloudpub/cloudpub:latest@sha256:53c71b18193647671bf6e309c9a2e49624bcd10b16322fbc26534228fe68f1d8
+    init: true
+    entrypoint: [/bin/sh, /start-agent.sh]
+    environment:
+      HOME: /home/cloudpub
+      TOKEN: ""
+      HTTP: ""
+      HTTPS: ""
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/cloudpub
+      - ./hooks/start-agent.sh:/start-agent.sh:ro
+    restart: unless-stopped
